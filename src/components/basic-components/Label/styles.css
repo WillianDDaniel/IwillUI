@@ -1,0 +1,40 @@
+/* ==========================================================================
+   Label: Default Style
+   ========================================================================== */
+
+/**
+ * 1. Display as a block to place it on its own line above an input field.
+ * 2. Adds spacing between the label and the form control that follows it.
+ * 3. Sets clear, readable typography that is slightly smaller but bolder
+ * than the input text, creating a nice visual hierarchy.
+ * 4. Changes the cursor to a pointer to indicate it's clickable, which
+ * improves user experience by showing it will focus the linked input.
+ */
+.label {
+  /* [1] */
+  display: block;
+
+  /* [2] */
+  margin-bottom: 0.5rem;
+  /* 8px if base font-size is 16px */
+
+  /* [3] */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  color: #212529;
+  /* A standard dark color for text */
+
+  /* [4] */
+  cursor: pointer;
+}
+
+/**
+ * The inner text container. It inherits all typography from the parent .label.
+ * No specific styles are needed by default, but the class is here for
+ * structure and potential customization.
+ */
+
+/* .label-text {
+/* Inherits styles from .label
+} */

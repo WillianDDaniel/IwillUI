@@ -1,0 +1,72 @@
+/* ==========================================================================
+   Checkbox: Default Style
+   ========================================================================== */
+
+/**
+ * Base styles for the custom checkbox component.
+ * This file defines the visual appearance and behavior of the checkbox,
+ * including its states (checked, disabled, focused) and the custom indicator.
+ */
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 16px;
+  color: #212529;
+}
+
+/* Custom checkbox styling */
+.checkbox-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-label {
+  margin-left: 8px;
+  user-select: none;
+}
+
+/* Custom checkbox indicator */
+.checkbox .checkbox-input + .checkbox-label::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ced4da;
+  border-radius: 3px;
+  background-color: #ffffff;
+  margin-right: 8px;
+  vertical-align: middle;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Checked state */
+.checkbox .checkbox-input:checked + .checkbox-label::before {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.checkbox .checkbox-input:focus-visible + .checkbox-label::before {
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.checkbox .checkbox-input:disabled + .checkbox-label {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.checkbox .checkbox-input:disabled + .checkbox-label::before {
+  background-color: #e9ecef;
+  border-color: #ced4da;
+}
+
+/* Disabled checked state */
+.checkbox .checkbox-input:checked:disabled + .checkbox-label::before {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}

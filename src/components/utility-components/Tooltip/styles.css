@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Tooltip: Default Style
+   ========================================================================== */
+
+.tooltip-container {
+  position: relative;
+  display: inline-block; /* Allows the tooltip to wrap around its children */
+}
+
+.tooltip-tip {
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap; /* Prevent text from wrapping */
+  z-index: 999; /* Ensure it's above other content */
+  bottom: 125%; /* Position above the element */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.tooltip-container:hover .tooltip-tip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Optional: Add a small arrow */
+.tooltip-tip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}

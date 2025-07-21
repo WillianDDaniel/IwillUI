@@ -1,0 +1,15 @@
+/* ==========================================================================
+   Icon: Default Style
+   ========================================================================== */
+
+/**
+ * Base styles for the Icon component.
+ * This file defines the visual appearance of an SVG icon.
+ */
+
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}

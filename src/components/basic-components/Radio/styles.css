@@ -1,0 +1,69 @@
+/* ==========================================================================
+   Radio: Default Style
+   ========================================================================== */
+
+.radio-container {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 16px;
+  color: #212529;
+}
+
+.radio-input {
+  /* Hide default radio */
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.radio-label {
+  margin-left: 8px;
+}
+
+/* Custom radio styling */
+.radio-container .radio-input + .radio-label::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ced4da;
+  border-radius: 50%; /* Makes it round */
+  background-color: #ffffff;
+  margin-right: 8px;
+  vertical-align: middle;
+  transition: all 0.2s ease-in-out;
+}
+
+.radio-container .radio-input:checked + .radio-label::before {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #ffffff;
+  content: '\2022'; /* Unicode for a bullet point */
+}
+
+.radio-container .radio-input:focus-visible + .radio-label::before {
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.radio-container .radio-input:disabled + .radio-label {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.radio-container .radio-input:disabled + .radio-label::before {
+  background-color: #e9ecef;
+  border-color: #ced4da;
+}
+
+.radio-container .radio-input:checked:disabled + .radio-label::before {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}

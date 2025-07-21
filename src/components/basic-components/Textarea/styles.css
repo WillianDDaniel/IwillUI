@@ -1,0 +1,61 @@
+/* ==========================================================================
+   Textarea: Default Style
+   ========================================================================== */
+
+/**
+ * 1. Base styles are kept consistent with the .input component for a unified look.
+ * 2. `line-height` is added to improve readability for multiple lines of text.
+ * 3. `resize: vertical` is a sensible default, allowing users to expand the
+ * textarea vertically without breaking the horizontal page layout.
+ * 4. A minimum height prevents the element from being too small by default.
+ */
+.textarea {
+  /* [1] */
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 16px;
+  color: #212529;
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  /* [2] */
+  line-height: 1.5;
+
+  /* [3] */
+  resize: vertical;
+
+  /* [4] */
+  min-height: 120px;
+}
+
+/**
+ * Placeholder styling, consistent with the input component.
+ */
+.textarea::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+/**
+ * Focus state, identical to the input component for a cohesive UX.
+ */
+.textarea:focus-visible,
+.textarea:focus {
+  outline: none;
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/**
+ * Disabled state, identical to the input component.
+ */
+.textarea[disabled] {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+  opacity: 1;
+}

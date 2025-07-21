@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Tag: Default Style
+   ========================================================================== */
+
+/**
+ * Base styles for the Tag component.
+ * This file defines the visual appearance of a small, often removable,
+ * label or keyword.
+ */
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3em 0.6em;
+  font-size: 85%;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  border-radius: 0.25rem;
+  background-color: #e0e0e0;
+  color: #333;
+  margin: 2px;
+}
+
+.tag-close-button {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 16px;
+  margin-left: 5px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+}
+
+.tag-close-button:hover {
+  color: #000;
+}

@@ -1,0 +1,100 @@
+/* ==========================================================================
+   Button: Default Style
+   ========================================================================== */
+
+/**
+ * 1. Main button container. We use flexbox to align icon and text.
+ * 2. Smooth transitions for visual feedback on hover.
+ * 3. Removes the default border and adds rounded corners.
+ * 4. Ensures the text does not wrap to multiple lines.
+ */
+.button {
+  display: inline-flex;
+  /* [1] */
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  /* Gap between the icon and the text */
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  /* [4] */
+
+  padding: 12px 24px;
+  cursor: pointer;
+
+  color: #ffffff;
+  background-color: #0d6efd;
+  /* Standard and vibrant blue */
+
+  border: none;
+  /* [3] */
+  border-radius: 8px;
+
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+  /* [2] */
+}
+
+/**
+ * Hover effect: slightly darkens the background to provide feedback.
+ */
+.button:hover {
+  background-color: #0b5ed7;
+}
+
+/**
+ * Click (active) effect: a slight shrink to simulate being pressed.
+ */
+.button:active {
+  transform: scale(0.97);
+}
+
+/**
+ * Visible focus for accessibility: adds a "shadow" that acts as
+ * an outline, without interfering with the layout.
+ */
+.button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.4);
+}
+
+/**
+ * Style for the disabled state: changes the color and cursor to indicate
+ * that the button is not interactive.
+ */
+.button[disabled] {
+  background-color: #6c757d;
+  color: #f8f9fa;
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+/* Prevents hover, active, and focus effects from applying to the disabled button */
+.button[disabled]:hover,
+.button[disabled]:active,
+.button[disabled]:focus-visible {
+  background-color: #6c757d;
+  transform: none;
+  box-shadow: none;
+}
+
+
+/* ==========================================================================
+   Inner Elements (Icon and Label)
+   ========================================================================== */
+
+/**
+ * Aligns the content of the icon and label spans, ensuring that
+ * the icon (if it's an SVG/font) behaves correctly.
+ */
+.button-icon-left,
+.button-icon-right,
+.button-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

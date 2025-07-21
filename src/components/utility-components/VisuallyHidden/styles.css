@@ -1,0 +1,21 @@
+/* ==========================================================================
+   VisuallyHidden: Default Style
+   ========================================================================== */
+
+/**
+ * Base styles for the VisuallyHidden component.
+ * This file defines CSS rules to hide content visually while keeping it
+ * accessible to screen readers and other assistive technologies.
+ */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap;
+}

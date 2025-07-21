@@ -1,0 +1,25 @@
+/* ==========================================================================
+   Divider: Default Style
+   ========================================================================== */
+
+/**
+ * Base styles for the Divider component.
+ * This file defines the visual appearance of a horizontal or vertical separator line.
+ */
+
+.divider {
+  background-color: #e0e0e0;
+}
+
+.divider-horizontal {
+  width: 100%;
+  height: 1px;
+  margin: 16px 0;
+}
+
+.divider-vertical {
+  width: 1px;
+  height: 100%;
+  margin: 0 16px;
+  display: inline-block; /* To make vertical divider work in a line */
+}

@@ -1,0 +1,63 @@
+/* ==========================================================================
+   Input: Default Style
+   ========================================================================== */
+
+/**
+ * 1. Basic styling for typography, padding, and borders.
+ * 2. Uses box-sizing to maintain a predictable layout.
+ * 3. Smooth transitions for focus effects for a better user experience.
+ * 4. Set width to 100% to fill its container, a common input behavior.
+ */
+.input {
+  /* [1] */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 16px;
+  color: #212529;
+  /* Dark text for readability */
+  background-color: #ffffff;
+  padding: 10px 14px;
+  border: 1px solid #ced4da;
+  /* A subtle, neutral border */
+  border-radius: 6px;
+
+  /* [2] */
+  box-sizing: border-box;
+
+  /* [3] */
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  /* [4] */
+  width: 100%;
+}
+
+/**
+ * Style for the placeholder text to be slightly muted.
+ */
+.input::placeholder {
+  color: #6c757d;
+  opacity: 1;
+  /* Override Firefox's lower default opacity */
+}
+
+/**
+ * Focus state for accessibility and visual feedback.
+ * Removes the default browser outline and applies a custom "glow" effect
+ * using border-color and box-shadow.
+ */
+.input:focus-visible,
+.input:focus {
+  outline: none;
+  border-color: #86b7fe;
+  /* A pleasant light blue */
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/**
+ * Style for the disabled state to make it look non-interactive.
+ */
+.input[disabled] {
+  background-color: #e9ecef;
+  /* A light grey to indicate it's inactive */
+  cursor: not-allowed;
+  opacity: 1;
+}

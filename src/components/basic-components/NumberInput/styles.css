@@ -1,0 +1,53 @@
+/* ==========================================================================
+   NumberInput: Default Style
+   ========================================================================== */
+
+/**
+ * Base styles for the custom NumberInput component.
+ * This file defines the visual appearance and behavior of the number input,
+ * including its increment/decrement buttons and input field.
+ */
+
+.number-input {
+  display: inline-flex;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 16px;
+  color: #212529;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.number-input-button {
+  background-color: #e9ecef;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.number-input-button:hover {
+  background-color: #dee2e6;
+}
+
+.number-input-button:active {
+  background-color: #c6cfd6;
+}
+
+.number-input-field {
+  border: none;
+  text-align: center;
+  padding: 8px 0;
+  width: 60px;
+  font-size: 16px;
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.number-input-field::-webkit-outer-spin-button,
+.number-input-field::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
