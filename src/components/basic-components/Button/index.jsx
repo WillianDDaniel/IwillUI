@@ -23,7 +23,7 @@ export const Button = ({
   icon = null,
   iconPosition = "left",
   label = "Click me!",
-  onClick = () => console.log("clicked!"),
+  onClick = () => {console.warn("onClick not defined");},
   type = "button",
   ...rest
 }) => {
