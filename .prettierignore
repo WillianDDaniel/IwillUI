@@ -1,0 +1,11 @@
+# Ignore artifacts:
+node_modules
+dist
+
+# Ignore package manager files:
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Ignore project-specific files:
+.DS_Store
